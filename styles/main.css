@@ -62,7 +62,8 @@
   transition: transform 1s 1s;
   transition: transform 1s 1s, -webkit-transform 1s 1s;
   width: 220px;
-  height: 287px; }
+  height: 287px;
+  cursor: pointer; }
   .person:hover {
     background: #eeeeee;
     border-radius: 10px;
