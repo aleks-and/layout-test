@@ -1,14 +1,103 @@
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400; }
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+.body {
+  font: 20px/23px Arial, sans-serif;
+  min-width: 320px;
+  color: #000; }
 
-body {
-  background: #eee; }
+.people {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 220px);
+  grid-gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative; }
+  @media only screen and (min-width: 751px) {
+    .people {
+      grid-template-columns: repeat(3, 220px); } }
+  @media only screen and (min-width: 1000px) {
+    .people {
+      grid-template-columns: repeat(4, 220px); } }
+
+.photo {
+  position: relative;
+  margin-bottom: 8px; }
+  .photo__image {
+    display: block;
+    max-width: 100%;
+    border-radius: 50%;
+    -webkit-transition: border-radius 1s 1s;
+    transition: border-radius 1s 1s; }
+
+.rank {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 16px);
+  right: 10px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #8B0000; }
+
+.person {
+  padding: 10px;
+  -webkit-transition: -webkit-transform 1s 1s;
+  transition: -webkit-transform 1s 1s;
+  transition: transform 1s 1s;
+  transition: transform 1s 1s, -webkit-transform 1s 1s;
+  width: 220px;
+  height: 287px; }
+  .person:hover {
+    background: #eeeeee;
+    border-radius: 10px;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    z-index: 2; }
+    .person:hover .photo__image {
+      border-radius: 60px; }
+    .person:hover .extra {
+      display: block; }
+
+.name {
+  color: #2F4F4F;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+  text-decoration: none; }
+
+.extra {
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 6px;
+  display: none; }
+
+.sport::after {
+  content: ","; }
+
+.pay::before {
+  content: "$"; }
+
+.pay::after {
+  content: "M"; }
+
+.details {
+  text-align: center;
+  position: relative; }
 
 /*# sourceMappingURL=main.css.map */
